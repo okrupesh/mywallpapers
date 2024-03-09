@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .image:hover img {
+            transform: scale(1.1);
+        }
+
+        .download-button-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            transition: opacity 0.3s ease;
+        }
+
+        .download-button {
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #666;
+        }
+
+        .image:hover .download-button-container {
+            opacity: 1;
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: #fff;
+                color: #222;
+            }
+
+            .image {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>My Wallpaper Gallery</h1>
+
+    <div class="gallery">
+        <div class="image">
+            <img src="./assets/wp1.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp2.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp3.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp4.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp5.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp6.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp7.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp8.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp9.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp10.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp11.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp12.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp13.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp14.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp15.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assets/wp16.jpg" alt="Wallpaper 1">
+            <div class="download-button-container">
+                <button class="download-button" onclick="downloadImage('wallpaper1.jpg', 'Wallpaper 1')">Download</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function downloadImage(imageUrl, imageName) {
+        var link = document.createElement('a');
+        link.href = imageUrl;
+        link.download = imageName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
+
+</body>
+</html>
